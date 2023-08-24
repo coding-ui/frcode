@@ -1,330 +1,113 @@
+program 1
+for i in range(5):
+    n=int(input("1-5"))
+    l2=['1','2','a']
+    l3=['4','5','6']
+    match n:
+     case 1:
+        l1=[]
+        n1=int(input("List Range"))
+        for i in range(0,n1):
+          a=input()
+          l1.append(a)
+        print(l1)
+     case 2:
+        print("Avaliable list",l2)
+        n2=int(input("range to append in list"))
+        for i in range(0,n2):
+          b=input()
+          l2.append(b)
+        print(l2)
+     case 3:
+        print("Avaliable list",l2)
+        q=input("Enter element to remove in list")
+        l2.remove(q)
+        print(l2)
+     case 4:
+        print(l1)
+        print(l2)
+        print(l2+l3)
+     case 5:
+        print(max(l3))
+
+program 2
+for i in range(5):
+    n=int(input("1-5"))
+    l2=['1','2','a']
+    l3=['4','5','6']
+    match n:
+     case 1:
+        l1=[]
+        print("Avaliable list",l2)
+        a=input("insert")
+        l2.insert(1,a)
+        print(l2)
+      
+     case 2:
+        print("Avaliable list",l2)
+        l2.clear()
+        print(l2)
+        
+     case 3:
+         print("Avaliable list",l2)
+         del l2
+         print(l2)
+     case 4:
+         print("Avaliable list",l2)
+         print("len of list",len(l2))
+     case 5:
+        print("Avaliable list",l2)
+        print(min(l2))
+
+program 3
+for i in range(5):
+    n=int(input("1-5"))
+    l2=['c','b','a']
+    l3=['4','7','6','2','9','5']
+    l4=[1,2,3,4,5,6,7,8,9,10]
+    match n:
+     case 1:
+        print("Avaliable list",l3)
+        l3.sort()
+        print(l3)
+      
+     case 2:
+        print("Avaliable list",l2)
+        print(l2[::-1])
+        print(l2)
+        
+     case 3:
+         print("Avaliable list",l2)
+         n1=int(input("List Range"))
+         for i in range(0,n1):
+          a=input("enter elements to add and extend")
+          l2.append(a)
+         print(l2)
+     case 4:
+         print("Avaliable list",l2)
+         i=input("enter elements to find")
+         if i in l2:
+             print("Exists")
+         else:
+             print(" NOT Exists")
+     case 5:
+         print("Avaliable list",l4)
+         odd,even=[],[]
+         for x in l4:
+              if x % 2 == 0:
+                even.append(x)
+              else:
+                odd.append(x)
+         print("\nThe even number in a list is:",even,"\nThe odd number in a list is:",odd)
+         print("LEN ODD",len(odd),"\nlen even",len(even))
+
+program 4
 
 
-PROGRAM FOR SQUARE, ROOT, CUBE AND COMPLEMENT
-
-<html>
-<head><b> <center>Program for Square,root,cube and complement</center></b><br>
-<body>
-<script language="javascript">
-var n,y,i,c;
-n=parseInt(prompt("Enter the value for Square Root and Cube"));
-document.write("The Square value is    :" +eval(n*n)+"<br>");
-document.write("The Cube value is      : "+eval(n*n*n)+"<br>");
-document.write("The Root value is      :"+Math.sqrt(n)+"<br>");
-var x=prompt("Enter the 10's Complement value");
-c=x.length;
-document.write("The Length is :"+c+"<br>");
-y=Math.pow(10,c)-x;
-document.write("The 10s Complement  value is  :" +y+"<br>");
-</script>
-</head>
-</html>
-
------------------------------------------------------------------
-  
-  SIMPLE CALCULATOR
-
-<html>
-<head><center><i><h3>Simple Calculator</h3></i></center>
-<script language="javascript">
-function add(form)
-{
-form.r1.value=parseInt(form.n1.value)+parseInt(form.n2.value);
-}
-function sub(form)
-{
-form.r2.value=parseInt(form.n1.value)-parseInt(form.n2.value);
-}
-function mul(form)
-{
-form.r3.value=parseInt(form.n1.value)*parseInt(form.n2.value);
-}
-function div(form)
-{
-form.r4.value=parseInt(form.n1.value)/parseInt(form.n2.value);
-}
-</script>
-<body bgcolor="yellow"><form><br><br><h2>First Number:</h2>
-<input type="text"name="n1"value=" ">
-<h2>Second Number:</h2>
-<input type="text"name="n2"value=" ">
-<br><br><br><h2>Results:</h2><br>
-
-<input type="text"name="r1"value=" ">
-<input type="button"onclick="add(this.form)" value="Addition"  name="addition"><br>
-<input type="text"name="r2"value=" ">
-<input type="button"onclick="sub(this.form)"  value="Subtraction"  name="subtraction"> <br>
-<input type="text"name="r3"value=" ">
-<input type="button"onclick="mul(this.form)"   value="Multiplication" name="multiplication"><br>
-<input type="text"name="r4"value=" ">
-<input type="button"onclick="div(this.form)" value="Division"  name="division"><br><br>
-
-<input type="reset"value="Reset">
-</form>
-</body>
-</html>
-
-  ------------------------------------------------------------------------------------------
-  
-  SORTING THE NUMBER AND NAME
-<html>
-<head><center><b>Sorting the Number and Name</b></center></head>
-<script language="javascript">
-function nosort()
-{
-var x=new Array(20);
-var t;
-var n=parseInt(prompt("Enter the N value","value"));
-for(i=0;i<n;i++)
-x[i]=parseInt(prompt("Enter the Number one by one"));
-for(i=0;i<n-1;i++)
-for(j=i+1;j<n;j++)
-if(x[i]>x[j])
-{
-t=x[i];
-x[i]=x[j];
-x[j]=t;
-}
-document.write("stored elements is:<br>");
-for(i=0;i<n;i++)
-document.write(x[i]+"<br>");
-}
-
-
-
-function strsort()
-{
-var x=new Array(20);
-var t;
-var n=parseInt(prompt("Enter the  N value","value"));
-for(i=0;i<n;i++)
-x[i]=prompt("Enter your character one by one");
-for(i=0;i<n-1;i++)
-for(j=i+1;j<n;j++)
-if(x[i]>x[j])
-{
-t=x[i];
-x[i]=x[j];
-x[j]=t;
-}
-document.write("Stored Elements is:<br>");
-for(i=0;i<n;i++)
-document.write(x[i]+"<br>");
-}
-</script>
-<body><form>
-<input type="button"  name="b1"  value="Name Sort"  onclick=strsort()>
-<input type="button" name="b2"  value="Number Sort"  onclick="nosort()">
-</form> </body> </html>
-------------------------------------------------------------------------------------------------------
-  
-  
-HIT COUNTER
-<html>	
-<head><center>HIT COUNTER</center></head>
-<body>
-<center>
-<input type="button" value="Click Me" name="cmdtest">
-</center>
-<script type="text/vbscript">
-dim counter
-sub cmdtest_onclick()
-	abc
-	msgbox "You hitted  " & counter & "  times"
-end sub	
-
-sub abc()
-	counter=counter+1
-end sub
-
-</script>
-</body>
-</html>
----------------------------------------------------------------------------------------------------------------
-  
-  
-VERIFY EMAIL ID
-
-<html>
-<body>
-<script language="vbscript">
-dim s
-s=inputbox("Enter you E-Mail id:")
-document.write("E-Mail ID is:  "& s & "<br>")
-set re=new regexp
-re.pattern="(\w+)\@(\w+)\.(\w+)"
-if re.test(s) then
-	document.write("Email ID is valid " & "<br>")
-else	
-	document.write("EMail ID is Invalid")
-
-end if
-</script>
-</body>
-</html>
-
-
---------------------------------------------------------------------------------------------------
-  
-MESSAGE IN STATUS
-
-<html>
-<head> <center><i><h3> MESSAGE IN STATUS BAR</h3></i></center></head>
-<body>
-<script language="javascript">
-function wopen()
-{
-         wo=window.open("square.html","windowobject","height=400",width="400",
-status="yes")
-         window.status="Hi Welcome to status bar";
-        setTimeout("wo.close();",5000);
-}
-</script>
-
-<form name="f1">
-<input type="button" name="b1" value="status" onclick="wopen( );">
-</form>
-</body>
-</html>
---------------------------------------------------------------------------------
-  
-
-DISPLAYING DIGITAL CLOCK
-
-<html>
-<center><head>Displaying Digital Clock</head>
-<body> 
-<script language="javascript">
-function begin(form)
-{
-form_name=form;
-timeout=window.setTimeout("display_date()");
-}
-function display_date()
-{
-form_name.date.value=new Date();
-timeout=window.setTimeout("display_date()");
-}
-function display_clock()
-{
-document.write("<form name=time_form><br><br>Current Date and Time"); 
-document.write('<input name="date" size=25 value=" "></form>');
-begin(document.time_form);
-}
-display_clock();
-</script></body></center></html>
-----------------------------------------------------------------------------------------------
-  MOVING MOUSE OVER THE IMAGES
-<html>
-<head><center><h2>MOVING MOUSE OVER THE IMAGES</h2>
-<script language="javascript">
-function imgon(im)
-{
-im.src="image 1.jpg";
-}
-function imgout(im)
-{
-im.src="image2.jpg";
-}
-</script></head></body>
-<h4>Place your Mouse Pointer on the Picture</h4>
-<a onmouseover="imgon(img1)" onmouseout="imgout(img1)">
-<img src="image3.jpg" height=200 width=200 name=img1></a>
-
-</center></body></html>
---------------------------------------------------------------------------------------------------
-
-SWAPPING IMAGES USING BUTTONS
-<html>
-<head><center><h2>SWAPPING IMAGES USING BUTTONS</h2></center>
-<script language="javascript">
-function imgs(im,x)
-{
-switch(x)
-{
-              case 1:
-	im.src="image 1.jpg";
-             break;
-             case 2:
-	im.src="image2.jpg";
-            break;
-           case 3:
-	im.src="image3.jpg";
-            break;
-}}
-</script></head><body><p>
-<image height=200 alt=space src="image4.jpg" width=200 name=im>
-<input type="button" value=First_image onclick="imgs(im,1)">
-<input type="button" value=Second_image onclick="imgs(im,2)">
-<input type="button" value=Third_image onclick="imgs(im,3)">
-</body></html>
---------------------------------------------------------------------------------------------------
-  REQUEST AND RESPONSE
-  Partial Class _Default
-    Inherits System.Web.UI.Page
-
-    Protected Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Dim d, t As Date
-        d = Today	
-        t = DateAdd(DateInterval.Day, 7, d)
-        Response.Write("<h1><font size=10 color=blue>" + "Thankyou" + TextBox1.Text + "<br>The Book" + DropDownList1.SelectedValue + "is to be returned on" + t + "</font><h1>")
-
-    End Sub
-End Class
-----------------------------------------------------------------------------------------------------------
-  load link mouseover
-  
-<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Default.aspx.vb" Inherits="_Default" %>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>MOUSE OVER EVENT</title>
-</head>
-<body>
-
-    <form id="form1" runat="server">
-<center><h3>MOUSE OVER EVENT</h3>
-
-<a href="http://localhost:59625/WebSite6/Default.aspx" onmouseover="click()">Mouse Over</a></center>
-
-    <div>
+        
+        
+        
+        
     
-    </div>
-       </form>
-</body>
-</html>
----------------------------------------------------------------------------------------------
-  NEW WINDOW WITHOUT TOOLBAR
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>NEW WINDOW WITHOUT TOOLBAR</title>
-</head>
-<script language ="javascript" type="text/javascript">
-var sec=0;
-function wopen()
-{
-wo=window.open("http://localhost:59625/WebSite6/Default.aspx" ,"windowobject","height=400",width="400,status="yes")
-	
-	setTimeout("wo.close();",4000);
-}
-</script><body>
-<center>The window will close after one minutes </center>
-<form name=f1>
-<input type ="button"  name="b1"  value="Status" onclick="wopen();"/>
-
-    <div>
-    
-    </div>
-    
-    </form>
-</body>
-</html>
--------------------------------------------------------------------------------------------------------------------------------------------------------
-                                                                          THE END
-  
-  
