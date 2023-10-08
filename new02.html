@@ -1,4 +1,138 @@
-program 1
+#armstrong number
+num = int(input("Enter a number: "))
+
+sum = 0
+
+temp = num
+while temp > 0:
+   digit = temp % 10
+   sum += digit ** 3
+   temp //= 10
+
+if num == sum:
+   print(num,"is an Armstrong number")
+else:
+   print(num,"is not an Armstrong number")
+
+#fibonacci series
+n=int(input("enter the number"))
+a = 0 
+b = 1 
+print(a,end=" ")
+for i in range(0,n):
+        c = a + b             
+        a = b              
+        b = c  
+        print(c,end=" ")        
+
+#factorial
+def factorial(n):
+    if n==0:
+       return 1
+    else:
+       return n*factorial(n-1)
+
+num=int(input("Enter a num"))
+print("Factorial of",num,"is",factorial(num))
+
+#positive range1
+minimum=int(input("Enter the Minimum Number"))
+maximum=int(input("Enter the Maximum Number"))
+
+print("\nAll Positive Numbers from",minimum,"and",maximum) 
+for num in range(minimum,maximum+1):
+    if num>0:
+        print(num,end=" ")
+#positive range2
+a=int(input("Enter the number:")) 
+if  a > 0: 
+    print("It is a positive number") 
+elif a==0:      
+    print("It is a zero") 
+else:     
+    print("It is a negative number") 
+
+        
+#prime number
+num=int(input("Enter the Number:"))
+if num>1:
+    for i in range(2,num):
+        if(num%i)==0:
+          print(num,"is not a prime number")
+          break
+    else:
+          print(num,"is a prime number")
+
+#palindrome
+s=input("Enter a string")
+
+if s==s[::-1]:
+    print("String is a palindrome")
+else:
+    print("String is not a palindrome")
+
+#vowels
+string ="Guru Nanak College"
+vowels ="AeEeIiOoUu"
+
+def checkVow(string,vowels):
+        final = [each for each in string if each in vowels]
+        print(len(final))
+        print(final)  
+
+checkVow(string,vowels)
+
+#creatingdict
+x={}
+n=int(input("How many element"))
+
+for i in range(n):
+    k=input("Enter the key")
+    v=int(input("value"))
+    x.update({k:v})
+print("The dictionary is=",x)
+    
+#tuple
+tup1 = ('physics', 'chemistry', 1997,  2000)
+tup2 = (1, 2, 3, 4, 5 )
+tup3 = ( "a", "b", "c", "d" ) 
+print (tup1) 
+print (tup2) 
+print (tup3)
+ # Positive Indexing
+print ("tup1[0]: ", tup1[0]) 
+ # Slicing
+print ("tup2[1:5]: ", tup2[1:5]) 
+ # Concatenating tuples
+tup3 = tup1 + tup2
+print (tup3)
+print ("After deleting tup1: ",tup1) 
+ # Existence of an element
+print(1 in tup2)
+print(1997 not in tup2) 
+ # Length of a tupleprint(len(tup1))
+print(len(tup1))
+  # Deleting a tuple 
+del tup1 
+
+#towerofhanoi
+def tower_of_hanoi(n, source, destination, helper):
+	if n==1:
+		print ("Move disk 1 from peg", source," to peg", destination)
+		return
+	tower_of_hanoi(n-1, source, helper, destination)
+	print ("Move disk",n," from peg", source," to peg", destination)
+	tower_of_hanoi(n-1, helper, destination, source)		
+# n = number of disks
+n = 3
+tower_of_hanoi(n,' A','B','C')
+
+
+
+
+  
+
+
 
         
         
