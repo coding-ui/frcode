@@ -137,6 +137,186 @@ print('{}--{}'.format('COUNTRY','CAPITAL'))
 for k in d:
     print('{}--{}'.format(k,d[k]))
 
+#bubblesort
+arr=[64,34,25,72,22,11,90]
+n = len(arr)
+def bubblesort(arr):    
+    for i in range(n):
+        for j in range(n-i-1):
+            if arr[j]>arr[j+1]:
+                arr[j],arr[j+1]=arr[j+1],arr[j] 
+ 
+bubblesort(arr) 
+print("sorted array is :") 
+for i in range(len(arr)):
+    print(arr[i],end=" ")
+
+#linear search
+arr= [1, 2, 3, 4,5, 6]
+n=len(arr)
+
+def search(arr,x):
+    for i in range(n):
+        if arr[i] == x:
+            return i 
+    return False
+   
+x = 10 
+result=search(arr, x)
+if result:
+    print("Found at index",result)  
+else:
+    print("Not Found")         
+
+#constructor
+class employee:
+    def __init__(self,name,ids):
+        self.ids = ids
+        self.name = name
+    def display (self):
+        print('ID:{ids}\nName:{name}'.format(ids=self.ids,name = self.name))
+emp1 = employee("John",101)       
+emp2 = employee("David",102)         
+emp1.display()       
+emp2.display() 
+
+#from abc import ABC 
+class Car(ABC):   
+    def mileage(self):   
+        pass  
+  
+class Tesla(Car):   
+    def mileage(self):   
+        print("The mileage is 30kmph")
+
+class Suzuki(Car):   
+    def mileage(self):   
+        print("The mileage is 25kmph ")
+        
+class Duster(Car):   
+     def mileage(self):   
+          print("The mileage is 24kmph ")   
+  
+class Renault(Car):   
+    def mileage(self):   
+            print("The mileage is 27kmph ")  
+   
+t=Tesla ()   
+t.mileage()   
+  
+r = Renault()   
+r.mileage()   
+  
+s = Suzuki()   
+s.mileage()   
+d = Duster()   
+d.mileage()  
+
+#exception handling
+import sys
+a=10
+b=int(input("enter num to divide"))
+
+try:
+    print(a/b)               
+except:
+    print("Oops!",sys.exc_info()[0],"occured.")
+
+#inheritance
+class human:
+    def speak(self):   
+        print("Human Speaking")   
+
+class Dog(human):       
+  def bark(self):          
+      print("Dog barking")
+      
+d=Dog()   
+d.bark()
+d.speak()
+
+#lamda usind dictionary
+colors = {"red":10,"green":35,"blue":15,"white":25} 
+c1 = sorted(colors.items(),key = lambda t:t[0]) 
+print(c1) 
+c2 = sorted(colors.items(),key = lambda t:t[1]) 
+print(c2)
+
+#length of string
+str1 =input("Enter a sting")
+
+length=len(str1)
+print("The Length is :",length)
+
+#A DICTIONARY WITH PLAYERS NAME AND SCORES
+x={}
+
+n = int(input("how many players ? ")) 
+for i in range(n):
+    k = input("enter player name:")
+    v = int(input("enter runs:")) 
+    x.update({k:v})
+    
+print("\nplayers in this match:") 
+for name in x.keys(): 
+    print(name,end=" ") 
+name = input("\nenter the players name:") 
+runs= x.get(name, -1) 
+if(runs == -1): 
+    print("players not found") 
+else:     
+    print("{} made runs {}.".format(name,runs)) 
+
+#tuple in loop
+tup1=("one","two","three")
+for i in tup1:
+    print(i)
+
+tup2=("tup")
+
+for x in range(5):
+    tup2=tup2,
+    print(tup2)
+
+tup3=("python,")*3
+print(tup3)
+
+#tuple functions
+x = (10, 20, 30, 40, 50, 60, 70, 80, 90) 
+print("Tuple : ", x) 
+ 
+total = sum(x) 
+print("The Sum of Integer Tuple is : ", total)  
+ 
+fruits = ('Banana', 'Orange', 'Blackberry', 'Apple', 'Kiwi', 
+'Grape') 
+print("Tuple : ", fruits) 
+ 
+minimum = min(fruits) 
+print("The Minimum Value in Fruits Tuple is : ", minimum)
+maximum = max(fruits) 
+print("The Maximum Value in Fruits Tuple is : ", maximum) 
+list1 = (0, 1, 2) 
+print(list(list1))  
+print(tuple('python')) 
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
 
     
 
