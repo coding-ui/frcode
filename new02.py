@@ -1,4 +1,4 @@
-#armstrong number
+#armstrong number.
 num = int(input("Enter a number: "))
 
 sum = 0
