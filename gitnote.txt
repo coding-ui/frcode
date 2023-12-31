@@ -1,0 +1,40 @@
+git --version  //check current version of git.
+git -v //short hand for git --version
+
+git config user.name // Check your user name
+git config user.email // Check the associated email
+
+git config --global user.name "newemail"
+git config --global user.email "newemail@example.com"
+//Note: The above will be a global change meaning that it'll change/set it for all git projects.
+
+//If you prefer changing it only for the one project/repositort:
+git config user.name "newemail"
+git config user.email "newemail@example.com"
+
+git config --global --list //check current username and email
+
+git int //intilize a folder, a working directory
+git status // current status,see what are the changes made.//
+git init -b main or <branchname> // intilize with user-defined branchname.
+//delete .git file in folder
+rm -rt .git
+
+git add <filename> //to stage or tell git to add the new changes made in file.
+git rm --cached <filename> // to unstage or remove from track.
+
+git commit -m "Any message here" // commit or save the changes made in code, -m stands for message.
+// Note: stage before commit changes,commit should contain a message.
+
+git commit -a -m "Any message here" // skip staging part use -a
+
+git log // to see commit history
+
+git diff // check the diffences/changes made.
+git diff --staged // check the diffences after staging.
+
+git add . // add multiple files
+git rm --cached <filename>// delete from git.
+
+git restore --staged <filename> //to unstage 
+
