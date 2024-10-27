@@ -1,175 +1,118 @@
 
-Dialog Box.
-<html>
-    <head>
-        <title> DIALOG BOX </title>
-    </head>
-    <body>
-        <font color="purple">DIALOG BOX </font><br><br>
-        <script>
-            alert("Welcome!! This is an Example for Alert");
-            var name = prompt("Enter Your Name:");
-            document.write("Hello " + name);
-            var result = confirm("Do you want to exit?");
-            if (result == true)
-            {
-                document.write("...........Thank You For Visiting");
-            }
-            else
-            {
-                document.write("Welcome to this page");
-            }
-        </script>
-    </body>
-</html>
+HTML TO SERVLET
 
--------------------------------------------------------------------------------------
-Math objects
+<!DOCTYPE html>
 
 <html>
     <head>
-        <title>MATH OPERATIONS</title>
-
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <h1><font color="red"> MATH OPERATIONS </font></h1>
-        <script>
-            document.write("<br>LN2 : " + Math.LN2);
-            document.write("<br>LN10 : " + Math.LN10);
-            document.write("<br>LOG2E : " + Math.LOG2E);
-            document.write("<br>PI : " + Math.PI);
-            document.write("<br>SQRT2 : " + Math.SQRT2);
-            document.write("<br>abs(-56) : " + Math.abs(-56));
-            document.write("<br>ceil(-45.78) : " + Math.ceil(-45.78));
-            document.write("<br>ceil(45.78) : " + Math.ceil(45.78));
-            document.write("<br>floor(-45.78) : " + Math.floor(-45.78));
-            document.write("<br>floor(45.78) : " + Math.floor(45.78));
-            document.write("<br>sqrt(7) : " + Math.sqrt(7));
-            document.write("<br>max(4,56,90,-45,9) : " + Math.max(4, 56, 90, -45, 9));
-            document.write("<br>min(4,56,90,-45,9) : " + Math.min(4, 56, 90, -45, 9));
-            document.write("<br>random() : " + Math.random());
-            document.write("<br>pow(2,3) : " + Math.pow(2, 3));
-            document.write("<br>round(100.879) : " + Math.round(100.879));
-        </script>
-    </body>
-</html>
-
----------------------------------------------------------------------
-Regular expression
-<html>
-    <head>
-        <title>Regular Expression</title>
-    </head>
-    <body>
-    <center>
-        <b><u><i> Regular Expression </i></u></b> <br><br>
-        <script>
-            document.write("<b><u>Searching the word: </u></b><br>");
-            var str = "Hello, I am doing javascript";
-            document.write("<b>String: </b>" + str);
-            var n = str.search(/Doing/i);
-            document.write("<br><b>The Position of the word: </b>" + n + "<br><br>");
-            function fun()
-            {
-                document.write("<b><u>Replacing the word: </u></b><br>");
-                var str = "Hi, It's me";
-                document.write("<b>String: </b>" + str);
-                var n = str.replace(/mE/i, "Java");
-                document.write("<br><b>The replaced string will be: </b>" + n + "<br><br>");
-                73
-            }
-            fun()
-        </script>
-    </center>
-</body>
-</html>
--------------------------------------------------------------------
-String objects
-<html>
-<head>
-<title>STRING OPERATIONS</title>
-<h1> <font color="Purple"> STRING OPERATIONS </font></h1>
-</head>
-<body>
-<script>
-var s=new String("Welcome RESHMA!!");
-document.write("<br>Length of the string: "+s.length);
-document.write("<br>charAt(3): "+s.charAt(3));
-document.write("<br>charCodeAt(2): "+s.charCodeAt(2));
-document.write("<br>indexOf(e): "+s.indexOf("e"));
-document.write("<br>lastIndexOf(e): "+s.lastIndexOf("e"));
-document.write("<br>replace(e,a): "+s.replace("e","a"));
-document.write("<br>search(e): "+s.search("e"));
-document.write("<br>substr(3,4): "+s.substr(3,4));
-document.write("<br>substring(0,5): "+s.substring(0,5));
-document.write("<br>toUpperCase(): "+s.toUpperCase());
-document.write("<br>toLowerCase(): "+s.toLowerCase());
-document.write("<br>Big Font: "+s.big());
-50
-document.write("<br>Small Font: "+s.small());
-document.write("<br>Bold Font: "+s.bold());
-document.write("<br>Italic Font "+s.italics());
-document.write("<br>Strike Font: "+s.strike());
-document.write("<br>Subscript: "+s.sub());
-document.write("<br>Superscript: "+s.sup());
-document.write("<br>Fontcolor(PURPLE): "+s.fontcolor("PURPLE"));
-document.write("<br>Fontsize(5): "+s.fontsize(5));
-</script>
-</body>
-</html>
-
----------------------------------------------------------------------
-form validation
-<html>
-    <head>
-        <title>FORM VALIDATION</title>
-    </head>
-    <body>
-        <script>
-            function validateform()
-            {
-                var name = document.myform.name.value;
-                var password = document.myform.pass.value;
-                if (name == null || name == "")
-                {
-                    alert("Please enter username");
-                    return false;
-                }
-                else if (password.length < 8)
-                {
-                    alert("Password must be minimum of eight characters");
-                    return false;
-                }
-            }
-        </script>
-        <form name="myform" onsubmit="return validateform()">
+        <form action="serv1" method="POST">
             <center>
+                <h1>BIO-DATA</h1>
+                Name:<input type="text" name="txtname" value=""><br>
+                Gender:
+                <input type="radio" name="radiogen" value="Male">Male
+                <input type="radio" name="radiogen" value="Female">Female<br>
+                Languages Known:
+                <input type="checkbox" name="c1" value="Tamil">Tamil
+                <input type="checkbox" name="c2" value="English">English
+                <input type="checkbox" name="c3" value="HIndhi">Hindi<br>
+                Percentage:
+                <input type="text"  name="per" value="">
+                <br>
+                <input type="submit" value="Click" >
                 
-                <b><u>Enter Your Details</u></b><br><br>
-                Name:<input type="text" name="name"><br><br>
-                Password:<input type="password" name="pass"><br><br>
-                <input type="submit" value="Login">
+                   
+            </center>
+        </form>
+
+    </body>
+</html>
+
+serv1.java
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+
+public class serv1 extends HttpServlet {
+
+
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            String name = request.getParameter("txtname");
+            String r = request.getParameter("radiogen");
+            String[] languages = {
+                request.getParameter("c1"),
+                request.getParameter("c2"),
+                request.getParameter("c3")};
+            String mark = request.getParameter("per");
+
+            out.println("<html>");
+            out.println("<body>");
+            out.println("<center>");
+            out.println("<br>BIO-DATA<br><br>");
+            out.println("Name of the student: " + name+ " <br>");
+            out.println("Gender: " + r + " <br>");
+            out.println("Languages Known: ");
+
+
+            for (String language : languages) {
+                if (language!=null) {
+                    out.println(language+" ");
+                }
+            }
+            out.println("<br>");
+            out.println("Percentage of marks: " + mark + "<br>");
+            out.println("</center>");
+            out.println("</body>");
+            out.println("</html>");
+
+        }
+    }
+
+  
+}
+
+------------------------------------------------------------------------------------------------------------------------------------
+cookies.html
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+           <form action="serv" method="POST">
+            <center>
+               <h1>Cookies</h1>
+               Username:<input type="text" name="txtname" value=""><br><br>
+               
+               <input type="submit" value="click">
             </center>
         </form>
     </body>
 </html>
----------------------------------------------------------------------------------
-Cookie/index.html
-<html>
-<head>
-<title>COOKIES</title>
-<body>
-<form action="cookie" method="post">
-<center>
-<font color="Olive"><b> COOKIES </b><br><br>
-Enter Your Name: <input type="text" name="txtname"><br><br>
-<input type="submit" value="Click">
-</center>
-</form>
-</body>
-</html>
 
-cookie.java/servelt by gpt
+
+serv.java
+
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
@@ -179,275 +122,316 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class cookie extends HttpServlet {
+
+public class serv extends HttpServlet {
+
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            out.println("<html>");
-            out.println("<head><title>Cookie Example</title></head>");
-            out.println("<body>");
-            out.println("Welcome");
-            out.println("<br>");
-            Date d = new Date();
+            Date d =new Date();
             String s = request.getParameter("txtname");
-            Cookie cc = new Cookie(s, d.toString());
-            response.addCookie(cc);
+            Cookie newcookie = new Cookie(s, d.toString());
+            
+            response.addCookie(newcookie);
 
-            // Retrieve cookies
-            Cookie[] c = request.getCookies();
-            if (c != null) {
-                for (Cookie cu : c) {
-                    String name = cu.getName();
-                    String val = cu.getValue();
-                    out.println(name + ": " + val);
-                    out.println("<br>");
-                }
+            // Retrieve and display cookies
+            Cookie[] cookies = request.getCookies();
+            
+          
+               for (Cookie cooky : cookies) {
+                 out.println(cooky.getName() + " " + cooky.getValue() + "<br>");
             }
+            
+
+            out.println("</html>");
+        }
+    }
+
+    
+
+}
+
+---------------------------------------------------------------------------------
+
+URL Rewriting
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <form action="Servlet1" method="POST">
+            <h1>URL-REWRITTING</h1><br>
+            Name:<input type="text" name="txtname" value="">
+            <input type="submit" value="Click">
+        </form>
+    </body>
+</html>
+
+Servlet1.java 
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.swing.text.html.HTML;
+
+
+public class Servlet1 extends HttpServlet {
+
+  
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            
+            
+            
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");          
+            out.println("</head>");
+            out.println("<body>");
+           
+            String s=request.getParameter("txtname");
+            out.println("Welcome " +s);
+            
+            out.println(" <a href='Servlet2?uname="+s+"'>LINK</a>");
+            
+            
             out.println("</body>");
             out.println("</html>");
         }
     }
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
 
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        // Optionally handle GET requests if needed
-        processRequest(request, response);
-    }
 }
 
-cookie.java/servelt in record
-SERVLET: cookie
+Servlet2
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.Date;
-import javax.servlet.http.Cookie;
 
-public class cookie extends HttpServlet {
-protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-throws ServletException, IOException {
-response.setContentType("text/html;charset=UTF-8");
-try (PrintWriter out = response.getWriter()) {
-out.println("Welcome");
-out.println("<br>");
-Date d=new Date();
-String s=request.getParameter("txtname");
-Cookie cc=new Cookie(s,d.toString());
-response.addCookie(cc);
-Cookie[] c=request.getCookies();
-for (int i=0;i<c.length;i++)
-{
-Cookie cu=c[i];
-String name =cu.getName();
-String val=cu.getValue();
-out.println(" ");
-out.println(name+" "+val);
-out.println("<br>");
-}
-out.println("<html>");
-}
-}
-}
---------------------------------------------------------------------------
+/**
+ *
+ * @author Sathish
+ */
+public class Servlet2 extends HttpServlet {
 
-URL Rewriting
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+                      
+            out.println("</head>");
+            out.println("<body>");
+            
+            
+            String s1=request.getParameter("uname");
+            out.println("Hello.."+s1+"<br>WELCOME TO SERVLET2");
+            
+            
+            out.println("</body>");
+            out.println("</html>");
+        }
+    }
+
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+    /**
+     * Handles the HTTP <code>GET</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+
+
+}
+
+-------------------------------------------------------------------------------------
+
+JSP Communication
+
+<!DOCTYPE html>
+
 <html>
     <head>
-        <title> URL REWRITING </title>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <form action="serv1" method="post">
+        <form action="std.jsp" method="post">
             <center>
-                <font color="Olive"><b> URL REWRITING </b><br><br>
-                Enter Your Name: <input type="text" name="txtname"><br><br>
-                <input type="submit" value="Click">
+                <h1>JSP COMMUNICATION</h1>
+                    <h2>STUDENT MARKS </h2>
+                    <b>
+                    Name: <input type="text" name="t1"><br>
+                    Roll No: <input type="text" name="t2"><br>
+                    Mark1: <input type="text" name="m1"><br>
+                    Mark 2: <input type="text" name="m2"><br>
+                    <input type="submit" value="click">
+                    </b>
             </center>
         </form>
     </body>
 </html>
 
-serv1.java/servelt in record
+std.jsp
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+<%-- 
+    Document   : std
+    Created on : Oct 27, 2024, 3:11:27 PM
+    Author     : Sathish
+--%>
 
-public class serv1 extends HttpServlet {
-
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            String n = request.getParameter("txtname");
-            out.println("<center>");
-            out.println("WELCOME.." + n);
-            out.println("<br><br>");
-            out.println("<a href='serv2?uname=" + n + "'>Click to Visit Servlet2 </a>");
-            out.close();
-        }
-    }
-}
-
-serv1.java/servlet in gpt
-
-import java.io.IOException;
-import java.io.PrintWriter;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-public class serv1 extends HttpServlet {
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            // Get the name parameter from the form
-            String name = request.getParameter("txtname");
-
-            // Generate the response
-            out.println("<html><body><center>");
-            out.println("WELCOME, " + name + "<br><br>");
-            // URL rewriting to pass the username to serv2
-            out.println("<a href='serv2?uname=" + name + "'>Click to Visit Servlet2</a>");
-            out.println("</center></body></html>");
-        }
-    }
-
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        // Handle the GET request with a proper message or error
-        response.sendError(HttpServletResponse.SC_METHOD_NOT_ALLOWED, "GET method is not supported for this operation.");
-    }
-}
-
-serv2.java/servlet in record
-import java.io.IOException;
-import java.io.PrintWriter;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-public class serv2 extends HttpServlet {
-protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-throws ServletException, IOException {
-response.setContentType("text/html;charset=UTF-8");
-try (PrintWriter out = response.getWriter()) {
-String n=request.getParameter("uname");
-out.println("<center>");
-out.println("Hello.."+n+"<br>WELCOME TO SERVLET2");
-out.close();
-}
-}
-}
-
-serv2.java/servlet in gpt
-
-import java.io.IOException;
-import java.io.PrintWriter;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-public class serv2 extends HttpServlet {
-
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            // Retrieve the 'uname' parameter passed via URL rewriting
-            String name = request.getParameter("uname");
-
-            // Generate the response
-            out.println("<html><body><center>");
-            out.println("Hello, " + name + "<br>WELCOME TO SERVLET2");
-            out.println("</center></body></html>");
-        }
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        // Handle the POST request with a proper message or error
-        response.sendError(HttpServletResponse.SC_METHOD_NOT_ALLOWED, "POST method is not supported for this operation.");
-    }
-}
-
--------------------------------------------------------------------------------------
-
-JSP FORWARD AND INCLUDE 
-
-<html>
-<head>
-<title> JSP FORWARD AND INCLUDE </title>
-</head>
-<body>
-<form action="jsp.jsp" method="get">
-Username: <input type="text" name="name"><br><br>
-Password: <input type="password" name="passwrd"><br><br>
-<input type="submit" value="Login">
-</form>
-</body>
-</html>
-
-jsp1.jsp
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
-<title>JSP Page</title>
-</head>
-<body>
-<%!String uname,pass1;%>
-<%
-uname = request.getParameter("name");
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <%
+        String na=request.getParameter("t1");
+        String m=request.getParameter("t2");
+        int a=Integer.parseInt(request.getParameter("m1"));
+        int b=Integer.parseInt(request.getParameter("m2"));
+        int tot=a+b;
+        int avg=tot/2;
+        out.println("<br>Name: "+na);
+        out.println("<br>Roll No: "+m);
+        out.println("<br>Mark 1: "+a);
+        out.println("<br>Mark 2: "+b);
+        out.println("<br>Total: "+tot);
+        out.println("<br>Average: "+avg);
+      
+        %>
+    </body>
+</html>
 
-pass1 = request.getParameter("passwrd");
+----------------------------------------------------------------------------------------------------------------------
+jsp forward and include
 
-if(uname.equals("Reshma") && pass1.equals("1234")){%>
-<jsp:forward page="newjsp2.jsp" />
-<%}
-else{%>
-UserName And Password InCorrect.
-<jsp:include page="index.html" />
-<%}%>
-</body>
+jspinclude.html
+
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>JSP and INCLUDE</h1>
+        <form action="newjsp1.jsp" method="POST">
+            Username: <input type="text" name="name"><br><br>
+            Password: <input type="password" name="passwrd"><br><br>
+            <input type="submit" value="Login">
+        </form>
+    </body>
+</html>
+
+
+newjsp1.jsp
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+
+        <%
+            String uname = request.getParameter("name");
+            String pass1 = request.getParameter("passwrd");
+
+            if (uname.equals("kumar") && pass1.equals("1234")) {
+        %>
+        
+        <jsp:forward page="newjsp2.jsp" />
+        
+        <% 
+            }else{
+        %> 
+         
+         Incorrect user id and password
+         <jsp:include page="jspinclude.html"/>
+         <%
+            }
+        %>
+        
+
+
+    </body>
 </html>
 
 newjsp2.jsp
+<%-- 
+    Document   : newjsp2
+    Created on : Oct 27, 2024, 3:27:24 PM
+    Author     : Sathish
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>JSP Page2 for forward </title>
-</head>
-<body>
-<%String u,p;
-u=request.getParameter("name");
-p=request.getParameter("pass1");%>
-Welcome: <%=u%>
-</body>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <%
+            String u = request.getParameter("name");
+//            String p = request.getParameter("pass1");
+        %>
+        Welcome: <%=u%>
+
+    </body>
 </html>
-
-
 
